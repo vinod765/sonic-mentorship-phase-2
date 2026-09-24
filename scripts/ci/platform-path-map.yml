@@ -1,0 +1,73 @@
+all_platforms:
+  - vs
+  - vpp
+  - alpinevs
+  - broadcom
+  - mellanox
+  - marvell-prestera-arm64
+  - marvell-prestera-armhf
+  - nvidia-bluefield
+  - aspeed-arm64
+
+rules:
+  - paths:
+      - "platform/vs/**"
+      - "src/sonic-mgmt/**"
+    platforms:
+      - vs
+
+  - paths:
+      - "platform/vpp/**"
+    platforms:
+      - vpp
+
+  - paths:
+      - "platform/broadcom/**"
+      - "dockers/docker-syncd-brcm/**"
+    platforms:
+      - broadcom
+
+  - paths:
+      - "platform/mellanox/**"
+      - "dockers/docker-syncd-mlnx/**"
+    platforms:
+      - mellanox
+
+  - paths:
+      - "platform/marvell-prestera/**"
+      - "dockers/docker-syncd-mrvl-prestera/**"
+    platforms:
+      - marvell-prestera-arm64
+      - marvell-prestera-armhf
+
+  - paths:
+      - "platform/nvidia-bluefield/**"
+    platforms:
+      - nvidia-bluefield
+
+  - paths:
+      - "platform/aspeed/**"
+    platforms:
+      - aspeed-arm64
+
+  - paths:
+      - "platform/alpinevs/**"
+    platforms:
+      - alpinevs
+
+  - paths:
+      - "src/sonic-sairedis/**"
+      - "src/sonic-swss-common/**"
+      - "src/sonic-frr/**"
+      - "src/sonic-linux-kernel/**"
+      - "dockers/**"
+      - "files/**"
+      - "device/**"
+      - "rules/**"
+      - "Makefile"
+      - "Makefile.work"
+      - "slave.mk"
+      - "functions.sh"
+      - ".azure-pipelines/**"
+      - ".gitmodules"
+    platforms: all
